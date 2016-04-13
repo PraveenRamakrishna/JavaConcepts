@@ -1,0 +1,27 @@
+Every type in Java is either a REFERENCE type or a PRIMITIVE type. 
+
+A reference type is any class, interface, or array type. All reference types are subtypes of class Object, 
+and any variable of reference type may be set to the value null. 
+	
+	Primitive 	Reference
+	byte 		Byte
+	short 		Short
+	int 		Integer
+	long 		Long
+	float 		Float
+	double 		Double
+	boolean 	Boolean
+	char 		Character
+
+* Boxing & UnBoxing:
+
+  Conversion of a primitive type to the corresponding reference type is called BOXING 
+  	and
+  Conversion of the reference type to the corresponding primitive type is called UNBOXING
+  
+  Check BoxingUnboxing.java program
+  
+* Generics
+     - SimpleGenerics
+     - Subtyping
+     - 

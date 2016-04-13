@@ -1,0 +1,48 @@
+Note: If you are reading through this package / examples to understand how collections interfaces / implementation work, follow below order
+ 1. List
+ 2. Sets
+ 3. Queue
+ 4. Maps 
+
+
+Some of the concepts to know while exploring collections:
+
+* Comparable [Natural Ordering] & Comparator:
+	
+	- Comparable: Interface imposes a total ordering on the objects of each class that implements it. 
+				  This ordering is referred to as the class's natural ordering, 
+				  and the class's compareTo method is referred to as its natural comparison method.
+				  
+	- Comparator: Comparison function, which imposes a total ordering on some collection of objects.
+				  Comparators can also be used to control the order of certain data structures (such as sorted sets or sorted maps),
+				  or to provide an ordering for collections of objects that don't have a natural ordering.
+				  
+* Shallow & Deep Copy:
+
+	- Shallow copies duplicate as little as possible. A shallow copy of a collection is a copy of the collection structure, not the elements. 
+	  With a shallow copy, two collections now share the individual elements.
+
+	- Deep copies duplicate everything. A deep copy of a collection is two collections with all of the elements in the original collection duplicated.
+	
+* Ordered & Sorted Collection:
+
+	- An ordered collection means that the elements of the collection have a specific order(based on the sequence you put stuff into/remove them from the collection). 
+	  The order is independent of the value. A List is an example.
+
+    - An sorted collection means that not only does the collection have order, but the order depends on the value of the element(keeps the elements sorted based on a sort criteria/data). 
+      A SortedSet is an example.
+
+
+* Initial Capacity & Load factor: An instance of HashMap has two parameters that affect its performance: initial capacity and load factor.
+
+    - The capacity is the number of buckets in the hash table, and the initial capacity is simply the capacity at the time the hash table is created. 
+    
+    - The load factor is a measure of how full the hash table is allowed to get before its capacity is automatically increased. 
+      When the number of entries in the hash table exceeds the product of the load factor and the current capacity, 
+      the hash table is rehashed (that is, internal data structures are rebuilt) so that the hash table has approximately twice the number of buckets.
+
+      As a general rule, the default load factor (.75) offers a good tradeoff between time and space costs. 
+      Higher values decrease the space overhead but increase the lookup cost (reflected in most of the operations of the HashMap class, including get and put). 
+      The expected number of entries in the map and its load factor should be taken into account when setting its initial capacity, so as to minimize the number of rehash operations. 
+      If the initial capacity is greater than the maximum number of entries divided by the load factor, no rehash operations will ever occur.
+	

@@ -1,0 +1,18 @@
+Map Interface, the only one that does not Inherit collection.
+
+A Map is an object that maps keys to values. A map cannot contain duplicate keys, Each key can map to at most one value.
+
+The Java platform contains three general-purpose Map implementations: 
+ - HashMap 
+ - TreeMap
+ - LinkedHashMap
+ 
+ behavior and performance are precisely analogous to HashSet, TreeSet, and LinkedHashSet.
+ 
+ 
+ The Map interface provides three collection views, which allow a map's contents to be viewed as 
+ 	- a set of keys, 
+ 	- collection of values or
+ 	- set of key-value mappings
+ 	
+Note: great care must be exercised if mutable objects are used as map keys

@@ -1,0 +1,33 @@
+The Queue interface - introduced in Java 5:
+
+public interface Queue<E> extends Collection<E> {
+    E element();
+    boolean offer(E e);
+    E peek();
+    E poll();
+    E remove();
+}
+
+Each Queue method exists in two forms: 
+
+1. one throws an exception if the operation fails. 
+2. the other returns a special value if the operation fails (either null or false, depending on the operation). 
+
+The regular structure of the interface is illustrated in the following table.
+
+Type of Operation	Throws exception	Returns special value
+	Insert				add(e)				offer(e)
+	Remove				remove()			poll()
+	Examine				element()			peek()
+
+Queues typically, but not necessarily, order elements in a FIFO (first-in-first-out) manner. 
+
+Among the exceptions are priority queues, which order elements according to their values.
+
+
+It is possible for a Queue implementation to restrict the number of elements that it holds, such queues are known as bounded. 
+Some Queue implementations in java.util.concurrent are bounded, but the implementations in java.util are not.
+
+Queue implementations generally do not allow insertion of null elements. 
+The LinkedList implementation, which was retrofitted to implement Queue, is an exception. 
+For historical reasons, it permits null elements, but you should refrain from taking advantage of this, because null is used as a special return value by the poll and peek methods.

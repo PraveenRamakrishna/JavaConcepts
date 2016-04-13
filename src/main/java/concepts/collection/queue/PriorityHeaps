@@ -1,0 +1,63 @@
+Priority queues are usually efficiently implemented by priority heaps. 
+
+A priority heap is a binary tree somewhat like "Red-Black Tree" implementing TreeSet, but with two differences: 
+
+Note: Read working of "Red-Black Tree" documented in TreesTerminology.txt at ..\concepts\collection\set package to know more 
+
+1st, the only ordering constraint is that each node in the tree should be larger than either of its children, 
+
+2nd, the tree should be complete at every level except possibly the lowest; if the lowest level is incomplete, the nodes it
+contains must be grouped together at the left. 
+
+			12
+		 /      \
+		8		 6
+      /   \	   /
+     2	   5  4
+
+To add a new element to a priority heap, it is first attached at the leftmost vacant position
+
+			12
+		 /      \
+		8		 6
+      /   \	   /	\
+     2	   5  4      7
+
+Then it is repeatedly exchanged with its parent until it reaches a parent that has higher priority. 
+
+			12
+		 /      \
+		8		 7
+      /   \	   /	\
+     2	   5  4      6
+
+
+Getting the highest-priority element from a priority heap is trivial: it is the root of the tree. 
+
+But, when that has been removed, the two separate trees that result must be reorganized into a priority heap again.
+
+			
+		 /      \
+		8		 7
+      /   \	   /	\
+     2	   5  4      6
+     
+
+ This is done by 
+	- first placing the rightmost element from the bottom row into the root position.
+	
+	 		 6
+		 /      \
+		8		 7
+      /   \	   /   \
+     2	   5  4     
+     	
+	- Then—in the reverse of the procedure for adding an element—it is repeatedly exchanged with the larger of its children until it
+	
+			 8
+		 /      \
+		6		 7
+      /   \	   /   \
+     2	   5  4     
+
+     
