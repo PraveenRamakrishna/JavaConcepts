@@ -14,7 +14,7 @@ import java.util.TreeMap;
 public class UnderstandGeneralPurposeMapImplementation {
 
 	private static Map<String, Integer> map;
-
+	
 	private static final int MAX_ENTRIES = 3;
 	
 	public static void main(String[] args) {
