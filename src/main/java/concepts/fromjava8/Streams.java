@@ -55,7 +55,7 @@ public class Streams {
 	persons.add(new Person("Test",LocalDate.of(1950, 1, 20),Sex.MALE,"TEST@TEST.com"));
 	persons.stream().filter(p -> p.getAge() > 60).distinct().forEach(System.out::println);	
 	
-	System.out.println("\nsorted - ensures that stream elements in subsequent operations are 	encountered according to the order imposed by a Comparator.");
+	System.out.println("\nsorted - ensures that stream elements in subsequent operations are encountered according to the order imposed by a Comparator.");
 	persons.stream().distinct().sorted((o1,o2) -> o2.getAge().compareTo(o1.getAge())).forEach(System.out::println);
 	
 	System.out.println("\nlimit - ensures that subsequent operations only see up to a maximum number of elements.");
