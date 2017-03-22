@@ -33,7 +33,7 @@ public class Streams {
 	public static void  main (String... args){
 	
 	//Intermediate operations, are used to described the transformations that should be performed over the stream of data
-	List<Person> persons = Person.createRoster();
+	List<Person> persons = null;
 
 	System.out.println("filter - excludes all elements that don’t match a Predicate");
 	persons.stream().filter(p -> p.getAge() > 18).forEach(System.out::println);; 

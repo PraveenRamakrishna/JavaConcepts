@@ -46,14 +46,14 @@ public class UsingCollections {
 		
 		//Using Collection Stream & Map method and Lambda Expression
 		friends.stream()
-		.map(name -> name.toUpperCase())
+		.map(String::toUpperCase)
 		.forEach(name -> System.out.println(name));
 		
 		//REQUIREMNT - Finding elements - Lets pick the names starting with letter A
 		List<String> startsWithA = 
 		friends.stream()
 			.filter(name -> name.startsWith("A"))
-			.map(name -> name.toUpperCase())
+			.map(String:: toUpperCase)
 			.collect(Collectors.toList());
 	}
 }

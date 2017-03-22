@@ -16,8 +16,11 @@ public class Person {
 	}
 
 	private String name;
+	
 	private LocalDate birthday;
+	
 	private Sex gender;
+	
 	private String emailAddress;
 
 	public String getName() {
@@ -50,16 +53,6 @@ public class Person {
 				+ emailAddress + "]";
 	}
 
-	public static List<Person> createRoster() {
-		List<Person> rosters = new ArrayList<>();
-		rosters.add(new Person("Test",LocalDate.of(1950, 1, 20),Sex.MALE,"TEST@TEST.com"));
-		rosters.add(new Person("Test",LocalDate.of(1964, 10, 17),Sex.FEMALE,"TEST@TEST.com"));
-		rosters.add(new Person("Test",LocalDate.of(1985, 7, 26),Sex.FEMALE,"TEST@TEST.com"));
-		rosters.add(new Person("Test",LocalDate.of(1983, 9, 07),Sex.MALE,"TEST@TEST.com"));
-		rosters.add(new Person("Test",LocalDate.of(2013, 5, 10),Sex.FEMALE,"TEST@TEST.com"));
-		return rosters;
-	}
-
 	public Person(String name, LocalDate birthday, Sex gender, String emailAddress) {
 		super();
 		this.name = name;
@@ -68,8 +61,8 @@ public class Person {
 		this.emailAddress = emailAddress;
 	}
 	
-	public static int compareByAge(Person a, Person b) {
-		return a.birthday.compareTo(b.birthday);
+	public int compareByAge(Person b) {
+		return this.birthday.compareTo(b.birthday);
 	}
 
 	@Override
