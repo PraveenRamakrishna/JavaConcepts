@@ -20,8 +20,3 @@ Features Covered:
 - java.util.stream
 - java.util.stream.Collectors
 
-
-
- 
-
-
