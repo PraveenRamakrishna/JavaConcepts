@@ -111,6 +111,7 @@ public class UnderstandLinkedList {
 		linkedList = new LinkedList<String>();
 
 		linkedList.addFirst("First");
+		linkedList.addFirst("Middle");
 		linkedList.addLast("Last");
 		
 		//Retrieves, but does not remove, the first/Last element of this list, throws an exception if the list is empty.

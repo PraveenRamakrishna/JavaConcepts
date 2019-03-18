@@ -17,6 +17,9 @@ Features Covered:
 
 ************************Important Interfaces Added in Java 8************************
 
-- java.util.stream
+- java.util.stream: A stream is a sequence of elements. Unlike a collection, it is not a data structure that stores elements. 
+				    Instead, a stream carries values from a source, such as collection, through a pipeline. 
+				    A pipeline is a sequence of stream operations, which in this example is filter- map-forEach. 
+				    In addition, aggregate operations typically accept lambda expressions as parameters, enabling you to customize how they behave.
+				    
 - java.util.stream.Collectors
-

@@ -11,7 +11,7 @@ import java.util.List;
 
 public class NestedClasses {
 
-	private int innerClassCanAccessMe = 10;
+	private static int innerClassCanAccessMe = 10;
 
 	private List<Integer> list = new ArrayList<Integer>();
 
@@ -21,6 +21,7 @@ public class NestedClasses {
 		// even if they are declared private
 		public void accessMembers(Integer integer) {
 			list.add(integer);
+			System.out.println(innerClassCanAccessMe);
 		}
 		
 		public int getSize() {
@@ -49,6 +50,10 @@ public class NestedClasses {
 		 * methods defined in its enclosing class: it can use them only through
 		 * an object reference.
 		 */
+		public void test(){
+		
+		//System.out.println(innerClassCanAccessMe);
+		}
 
 	}
 
